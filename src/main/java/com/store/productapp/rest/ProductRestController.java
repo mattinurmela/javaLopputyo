@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.store.productapp.data.Product;
@@ -32,13 +32,13 @@ public class ProductRestController {
     }
 
     @PostMapping("/product")
-    public String addProduct(@RequestParam Product product){
+    public String addProduct(@RequestBody Product product){
         pc.addProduct(product);
         return "Product added";
     }
 
     @DeleteMapping("/product")
-    public String deleteProduct(@RequestParam Product product){
+    public String deleteProduct(@RequestBody Product product){
         pc.removeProduct(product.getId());
         return "Product removed";
     }
