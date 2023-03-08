@@ -13,12 +13,10 @@ public class ProductService {
     private List<Product> products = new ArrayList<>();
 
     public ProductService(){
-        products = Arrays.asList(
-            new Product("Samsung", 200, 12345),
-            new Product("Iphone", 400, 23456),
-            new Product("OnePlus", 350, 34567),
-            new Product("Nokia", 150, 45678)
-        );
+           products.add(new Product("Samsung", 200, 1));
+           products.add(new Product("Iphone", 400, 2));
+           products.add(new Product("OnePlus", 350, 3));
+           products.add(new Product("Nokia", 150, 4));       
     }
 
     public void addProduct(Product product){
