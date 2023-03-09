@@ -3,16 +3,18 @@ package com.store.productapp.data;
 public class Customer {
     private String fname;
     private String lname;
-    private int pnum;
+    private String pnum;
+    private int custid;
 
 
     public Customer() {
     }
 
-    public Customer(String fname, String lname, int pnum) {
+    public Customer(String fname, String lname, String pnum, int custid) {
         this.fname = fname;
         this.lname = lname;
         this.pnum = pnum;
+        this.custid = custid;
     }
 
     public String getFname() {
@@ -31,12 +33,25 @@ public class Customer {
         this.lname = lname;
     }
 
-    public int getPnum() {
+    public String getPnum() {
         return this.pnum;
     }
 
-    public void setPnum(int pnum) {
+    public void setPnum(String pnum) {
         this.pnum = pnum;
+    }
+
+
+    public Customer(int custid) {
+        this.custid = custid;
+    }
+
+    public int getCustid() {
+        return this.custid;
+    }
+
+    public void setId(int custid) {
+        this.custid = custid;
     }
 
 }

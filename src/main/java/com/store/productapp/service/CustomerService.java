@@ -17,14 +17,28 @@ public class CustomerService {
     }
 
     public void addCustomer(Customer customer){
-        customer.add(customer);
+        customers.add(customer);
     }
 
-    public Customer findCustomer(){
-        
+    public List<Customer> getCustomers(){
+        return new ArrayList<>(customers);
     }
 
-    public void addProduct(){
-        
+    public Customer findCustomer(int custid){
+        for (Customer customer : customers) {
+            if(customer.getCustid() == custid){
+                return customer;
+            }
+        }
+        return null;  
+    }
+
+    public boolean removeCustomer(int custid){
+        Customer c = findCustomer(custid);
+
+        if(c != null){
+            return customers.remove(c);
+        }
+        return false;
     }
 }

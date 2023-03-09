@@ -1,7 +1,6 @@
 package com.store.productapp.service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -27,11 +26,6 @@ public class ProductService {
         return new ArrayList<>(products);
     }
 
-    /*
-     * 
-     * 
-     */
-
     public Product findProduct(int id){
         for (Product product : products) {
             if(product.getId() == id){
@@ -48,5 +42,17 @@ public class ProductService {
             return products.remove(p);
         }
         return false;
+    }
+
+    public Product updateProduct(int id, String name, double price){
+
+        Product up = findProduct(id);
+
+        if (up != null){
+            up.setName(name);
+            up.setPrice(price);
+            return up;
+        }
+        return null;
     }
 }
