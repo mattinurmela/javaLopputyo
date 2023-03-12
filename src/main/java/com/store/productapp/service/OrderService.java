@@ -13,7 +13,11 @@ public class OrderService {
     private List<Order> orders = new ArrayList<>();
 
     public OrderService(){
-
+        orders.add(new Order(1,1,"Samsung, Iphone",2,1500));
+        orders.add(new Order(2,2,"Samsung, Iphone, ",2,1500));
+        orders.add(new Order(2,3,"Samsung, Iphone",2,1500));
+        orders.add(new Order(2,3,"Samsung, Iphone",2,1500));
+        orders.add(new Order(2,3,"Samsung, Iphone",2,1500));
     }
 
     public void addOrder(Order order){

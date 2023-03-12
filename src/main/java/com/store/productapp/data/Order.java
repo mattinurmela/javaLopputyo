@@ -1,5 +1,6 @@
 package com.store.productapp.data;
 
+
 public class Order {
     private int orderid;
     private int custorderid;
