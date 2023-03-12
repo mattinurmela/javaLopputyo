@@ -13,7 +13,9 @@ public class CustomerService {
     private List<Customer> customers = new ArrayList<>();
 
     public CustomerService(){
-        
+        customers.add(new Customer("Matti", "Esko", "01234567",1));
+        customers.add(new Customer("Matti", "Meikäläinen", "01234567",2));
+        customers.add(new Customer("Teppo", "Testi", "01234567",3));   
     }
 
     public void addCustomer(Customer customer){

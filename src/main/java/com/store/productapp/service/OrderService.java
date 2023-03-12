@@ -14,10 +14,9 @@ public class OrderService {
 
     public OrderService(){
         orders.add(new Order(1,1,"Samsung, Iphone",2,1500));
-        orders.add(new Order(2,2,"Samsung, Iphone, ",2,1500));
-        orders.add(new Order(2,3,"Samsung, Iphone",2,1500));
-        orders.add(new Order(2,3,"Samsung, Iphone",2,1500));
-        orders.add(new Order(2,3,"Samsung, Iphone",2,1500));
+        orders.add(new Order(2,2,"PS 5, Harman/kardon soundbar, ",2,2000));
+        orders.add(new Order(3,3,"Samsung",1,300));
+        orders.add(new Order(4,4,"Asus notebook",1,1500));
     }
 
     public void addOrder(Order order){
